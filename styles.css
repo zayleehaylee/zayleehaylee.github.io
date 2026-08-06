@@ -1,0 +1,41 @@
+h1 {
+    color:rgb(120, 16, 96);
+    text-decoration: overline;
+}
+h2 {
+    color: rgb(120, 16, 96);
+}
+body {
+    background-color: rgb(228, 130, 247);
+}
+img {
+    border-radius: 100px;
+    border: 5px dashed rgb(120, 16, 96);
+}
+body {
+    color: rgb(120, 16, 96);
+    max-width: 1000px;
+    margin: auto;
+}
+button {
+    color: rgb(186, 94, 206);
+    background-color: rgb(99, 60, 134);
+    border-radius: 100px;
+    border-color: rgb(186, 94, 206);
+}
+.navbar {
+    background-color: rgb(99, 60, 134);
+    padding: 12px;
+    text-align: center;
+    border-radius: 100px;
+}
+.navbar a {
+    color: rgb(5, 5, 5);
+    text-decoration: underline dotted;
+    margin: 0 10px;
+    padding: 8px 14px;
+    border-radius: 20px;
+}
+.navbar a:hover {
+    background-color: rgb(186, 94, 206);
+}

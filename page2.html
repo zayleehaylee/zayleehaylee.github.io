@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>snippets of gigi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<style>
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+    .gallery-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    body {
+        text-align: center;
+    }
+    h1 {
+        border: 5px solid rgb(188, 58, 170);
+        border-radius: 25px;
+        padding: 15px 20px;
+        display:inline-block;
+        text-decoration: none;
+    }
+</style>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Page 1</a>
+        <a href="page2.html">snippets of gigi</a>
+        <a href="page3.html">Page 3</a>
+        <a href="testversionofindex.html">Test Version of Index</a>
+    </nav>
+     <h1>snippets of gigi</h1>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="IMG_1885.jpeg" width="200">
+            <button onclick="alert('this is a pic of smooshie being bratty when im trying to say hello to her!')">yawn</button>
+        </div>
+        <div class="gallery-item">
+            <img src="IMG_1165.jpeg" width="200">
+            <button onclick="alert('here is gigi staring at me wanting pets before she goes to bed')">tired floof</button>
+        </div>
+        <div class="gallery-item">
+            <img src="IMG_2387.jpeg" width="200">
+            <button onclick="alert('baby gigi on her first day home!')">who's this?</button>
+        </div>
+    </div>
+    <p>
+        these are a few photos from gigi's life so far! from her baby days to her brattie faces she has truly grown into herself! her sassy attitude and fierce stubbornness is what makes her so lovable! 
+    </p>
+     <button onclick="add0ne()">🫶</button>
+    <p id="count">0</p>
+    <script>
+        let count = 0;
+        function add0ne() {
+            count = count + 1
+            document.getElementById('count').textContent = count
+            if (count % 10 === 0) {
+                alert('you have clicked the button ' + count + ' times! you are a true gigi fan!')
+            }
+        }
+    </script>
+    <a href="https://youtube.com">placeholder for morgan's website</a>
+    <p>
+        this is a link to my cousin morgan's website - we have both begun a coding camp in which we both coded websites about our floofs!
+    </p>
+</body>
+</html>

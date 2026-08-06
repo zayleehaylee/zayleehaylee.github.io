@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test site 2</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<style>
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+    .gallery-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    body {
+        text-align: center;
+    }
+</style>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Page 1</a>
+        <a href="page2.html">snippets of gigi</a>
+        <a href="page3.html">Page 3</a>
+        <a href="testversionofindex.html">Test Version of Index</a>
+    </nav>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="IMG_1885.jpeg" width="200">
+            <button onclick="alert('this is a pic of smooshie being brattie when im trying to say hello to her!')">yawn</button>
+        </div>
+        <div class="gallery-item">
+            <img src="IMG_1165.jpeg" width="200">
+            <button onclick="alert('here is gigi staring at me wanting pets before she goes to bed')">tired floof</button>
+        </div>
+        <div class="gallery-item">
+            <img src="IMG_2387.jpeg" width="200">
+            <button onclick="alert('baby gigi on her first day home!')">who's this?</button>
+    </div> 
+    <button onclick="add0ne()">🫶</button>
+    <p id="count">0</p>
+    <script>
+        let count = 0;
+        function add0ne() {
+            count = count + 1
+            document.getElementById('count').textContent = count
+            if (count % 10 === 0) {
+                alert('you have clicked the button ' + count + ' times! you are a true gigi fan!')
+            }
+        }
+    </script>
+</body>
+</html>
