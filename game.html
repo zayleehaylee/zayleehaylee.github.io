@@ -16,24 +16,20 @@
         <a href="testversionofindex.html">Test Version of Index</a>
         <a href="game.html">gigi game</a>
     </nav>
-    <!-- This is the game play area where the bee will appear and move around. -->
-    <div id="game-area">
-        <!-- This is the clickable bee character that the player tries to catch. -->
-        <div id="target" onclick="caught()">🐶</div>
-    </div>
+    <!-- This is the clickable bee character that the player tries to catch. -->
+    <div id="target" onclick="caught()">🐶</div>
     <!-- This shows the player's score on the page. -->
-    <p id="score">Score: 0</p>
+    <p id="score">Barks: 0</p>
 
     <script>
-    // This starts the score at zero and stores references to the bee and the game area.
+    // This starts the score at zero and stores references to the bee.
     let score = 0
     const target = document.getElementById('target')
-    const gameArea = document.getElementById('game-area')
 
-    // This function moves the bee to a new random position inside the game area.
+    // This function moves the bee to a new random position across the page.
     function move() {
-        const maxX = gameArea.clientWidth - target.offsetWidth
-        const maxY = gameArea.clientHeight - target.offsetHeight
+        const maxX = window.innerWidth - target.offsetWidth
+        const maxY = window.innerHeight - target.offsetHeight
 
         target.style.left = Math.random() * maxX + 'px'
         target.style.top = Math.random() * maxY + 'px'

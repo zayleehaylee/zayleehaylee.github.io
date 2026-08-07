@@ -23,19 +23,7 @@ body {
     overflow: hidden;
 }
 
-/* This styles the game box so the bee has a defined space to move inside. */
-#game-area {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    margin-top: 20px;
-    border: 3px dashed rgb(99, 60, 134);
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.3);
-    overflow: hidden;
-}
-
-/* This makes the bee look clickable and lets it be positioned freely inside the game area. */
+/* This makes the bee look clickable and lets it be positioned freely on the page. */
 #target {
     position: absolute;
     font-size: 60px;
