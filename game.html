@@ -1,13 +1,57 @@
-<link rel="stylesheet" href="styles.css">
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gigi game</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.png" type="image/png">
 </head>
 <body>
+    <!-- This creates the top navigation bar so visitors can move between pages on the website. -->
     <nav class="navbar">
         <a href="page2.html">snippets of gigi</a>
         <a href="index.html">Index</a>
         <a href="page3.html">Page 3</a>
         <a href="testversionofindex.html">Test Version of Index</a>
-        <a href="game.html">Game</a>
+        <a href="game.html">gigi game</a>
     </nav>
+    <!-- This is the game play area where the bee will appear and move around. -->
+    <div id="game-area">
+        <!-- This is the clickable bee character that the player tries to catch. -->
+        <div id="target" onclick="caught()">🐶</div>
+    </div>
+    <!-- This shows the player's score on the page. -->
+    <p id="score">Score: 0</p>
+
+    <script>
+    // This starts the score at zero and stores references to the bee and the game area.
+    let score = 0
+    const target = document.getElementById('target')
+    const gameArea = document.getElementById('game-area')
+
+    // This function moves the bee to a new random position inside the game area.
+    function move() {
+        const maxX = gameArea.clientWidth - target.offsetWidth
+        const maxY = gameArea.clientHeight - target.offsetHeight
+
+        target.style.left = Math.random() * maxX + 'px'
+        target.style.top = Math.random() * maxY + 'px'
+    }
+
+    // This function runs when the bee is clicked, increases the score, and makes the bee move again.
+    function caught() {
+        score = score + 1
+        document.getElementById('score').textContent = 'gigis: ' + score
+        move()
+    }
+
+    // This makes the bee move every second so it appears to be hopping around.
+    setInterval(move, 1000)
+    // This makes sure the bee adjusts if the browser window is resized.
+    window.addEventListener('resize', move)
+    // This places the bee at a starting position when the page loads.
+    move()
+    </script>
 </body>
+</html>
